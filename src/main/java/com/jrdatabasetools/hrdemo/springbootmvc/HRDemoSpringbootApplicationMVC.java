@@ -16,6 +16,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.vaadin.open.Open;
+
 import oracle.ucp.jdbc.PoolDataSource;
 import oracle.ucp.jdbc.PoolDataSourceFactory;
 
@@ -36,7 +38,8 @@ public class HRDemoSpringbootApplicationMVC {
   public static void main(String[] args) {
     SpringApplication app = new SpringApplication(HRDemoSpringbootApplicationMVC.class);
     app.run();
-    LaunchWebBrowser.browse("http://localhost:8080");
+    
+    Open.open("http://localhost:8080");
   }
 
   @Bean

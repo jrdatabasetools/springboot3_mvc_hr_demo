@@ -4,7 +4,7 @@
 
 ### Installed Software
 
-- Java 11
+- Java 17
 - Docker 
 - Maven 3.x
 
@@ -34,5 +34,5 @@ This is a Master-Detail Demonstration written in Spring Boot MVC using the Oracl
 Use two command shells to run both commands.
 
 - **run_oracle.sh** runs the preconfigured Oracle Database. 
-- **mvn spring-boot:run** runs the PL/SQL Connector Builder, compiles the Spring-Boot-Application and starts the Spring-Boot-Application using the Oracle DB.
+- **mvn** runs the PL/SQL Connector Builder, compiles the Spring-Boot-Application and starts the Spring-Boot-Application using the Oracle DB.
 - Use **http://localhost:8080** to access the application.
