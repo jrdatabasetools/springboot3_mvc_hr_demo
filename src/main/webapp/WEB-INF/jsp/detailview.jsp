@@ -7,6 +7,7 @@
 </head>
 <body>
 	<h1>Detail-View</h1>
+  <p>(No Field Validation on Edit Fields - Errors will appear from Spring Controller or Oracle DB Errors to demonstrate Database Errors)</p>
 	<hr>
 
 	<c:if test="${not empty error_message}">
@@ -48,8 +49,8 @@
 
 			<tr class="search_form">
 				<td class="search_form"><label for="hireDate">Hire Date</label></td>
-				<td class="search_form"><input type="text" id="hireDate"
-					name="hireDate" size="50" value="${employee.getOHireDate()}"></td>
+        <td class="search_form"><input type="text" id="hireDate"
+          name="hireDate" size="50" value="${hireDate}"></td>
 			</tr>
 
 			<tr class="search_form">

@@ -1,7 +1,7 @@
 spring:
   application:
     name: hr_demo_springboot_mvc
-
+  
   mvc:
     view:
       prefix: "/WEB-INF/jsp/"

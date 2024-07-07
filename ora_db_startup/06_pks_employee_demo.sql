@@ -1,7 +1,7 @@
 alter session set container = XEPDB1;
+alter session set current_schema = hr;
 
-
-create or replace package hr.pkg_employee_demo
+create or replace package pkg_employee_demo
 as
 
 
@@ -111,8 +111,8 @@ procedure get_combos
 /**
  * search for employees to list in master view
  *
- * @param i_job_id search only for specific job titles
  * @param i_search_term search term of first name, last name and email
+ * @param i_job_id search only for specific job titles
  * @param i_manager_id search only for specific managers
  * @param i_department_id search only for specific departments
  * @param i_location_id search only for specific locations
@@ -121,8 +121,8 @@ procedure get_combos
  */
 function list_employees
 (
-  i_job_id          in  jobs.job_id%type,
   i_search_term     in  varchar2,
+  i_job_id          in  jobs.job_id%type,
   i_manager_id      in  employees.employee_id%type,
   i_department_id   in  departments.department_id%type,
   i_location_id     in  locations.location_id%type,
@@ -160,7 +160,7 @@ procedure load_employee
   o_last_name           out employees.last_name%type,
   o_email               out employees.email%type,
   o_phone_number        out employees.phone_number%type,
-  o_hire_date           out varchar2,
+  o_hire_date           out employees.hire_date%type,
   o_salary              out employees.salary%type,
   o_commission_pct      out employees.commission_pct%type,
   o_job_id              out employees.job_id%type,
@@ -196,9 +196,9 @@ procedure save_employee
   i_last_name           in  employees.last_name%type,
   i_email               in  employees.email%type,
   i_phone_number        in  employees.phone_number%type,
-  i_hire_date           in  varchar2,
-  i_salary              in  varchar2,
-  i_commission_pct      in  varchar2,
+  i_hire_date           in  employees.hire_date%type,
+  i_salary              in  employees.salary%type,
+  i_commission_pct      in  employees.commission_pct%type,
   i_job_id              in  employees.job_id%type,
   i_manager_id          in  employees.manager_id%type,
   i_department_id       in  employees.department_id%type,
