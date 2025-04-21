@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Jan Richter, www.jr-database-tools.com, Switzerland, 2015-2024. All rights reserved.
+ * Copyright (c) jr-database-tools GmbH, Switzerland, 2015-2025. All rights reserved.
  */
 
 package com.jrdatabasetools.hrdemo.springbootmvc;
