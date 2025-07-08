@@ -2,6 +2,8 @@
 
 ## Prerequisites
 
+Install PL/SQL Connector Builder Maven Plugin from : https://www.jr-database-tools.com/download
+
 ### Installed Software
 
 - Java 17
